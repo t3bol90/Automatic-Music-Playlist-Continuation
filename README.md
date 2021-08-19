@@ -17,9 +17,17 @@ Automatic music playlist continuation is a task focused on `ACM Recommender Syst
 ---
 <div style="page-break-after: always"></div>
 
+# Problem statement
+How can I get a different recommended song from list tracks of my playlist ? Answer this question will solve the problem of sequential recommendation problem, with a user's playlist Q, we can offer/recommend them a list of suitable tracks which fit with their playlist. In this course, our team will use Machine Learning to solve this problem.
+
+Our model is an system which tries to calculate the rating or score of how fit is a track to a playlist. For mathematics approach, the problem statement is defined by:
+- Given a list of playlist Q, calculate score of each tracks in $\Omega'$.
+- In recommendation stage, we choose $P$ tracks with highest score for recommendation.
+
 # Table of contents
 
 - [Abstract](#abstract)
+- [Problem statement](#problem-statement)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
 - [Todo](#todo)
