@@ -43,11 +43,13 @@ In notebook enviroment, use this block to make sure you have updated enviroment:
 ```bash
 conda_list = !conda list
 conda_env_string = "".join(conda_list)
-if "spotipy" in conda_env_string:
-    print("requirement has been installed")
-else:
-    print("install requirement")
-    !conda env create --file .\min_ds-env.yml --force
+def check_installed_requirement(reqs):
+    for req in reqs:
+        if req in conda_env_string:
+            print(f"requirement {req} has been installed")
+        else:
+            print(f"installing {req} by using conda ...")
+            !conda install {req}
 ```
 
 <!-- (remove in final submission) -->
@@ -56,8 +58,7 @@ else:
 
 - [x] Survey of the problem
 - [x] Plan used for teamwork (Grantt file, current: TODO list) 
-- [ ] Crawl data from Spotify API (Spotipy lib)
-- [ ] Parse HTML from Spotify web-app
+- [x] Crawl data from Spotify API (Spotipy lib)
 - [ ] Explore data 
 - [ ] Preprocess data
 - [ ] Reflection
