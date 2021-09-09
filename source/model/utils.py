@@ -2,22 +2,17 @@ import numpy as np
 import random
 import pandas as pd
 
-def generate_playlist(pd_track, pd_playlist, num_playlist_to_test = 100):
-    playlist_choices = random.choices(np.arange(pd_playlist.shape[0]), k = num_playlist_to_test)
 
-    playlist_ids = []
-
-    for playlist_index in playlist_choices:
-        a = pd_track[pd_playlist.loc[playlist_index, 'playlist_id'] == pd_track['playlist_id']].shape[0]
-        if(a >= 30):
-            playlist_ids.append(pd_playlist.loc[playlist_index, 'playlist_id'])
-    
+def generate_playlist(pd_track, pd_playlist, num_playlist_to_test=100,threshold=30):
+    playlist_sampled = pd_playlist[pd_playlist["playlist_num_tracks"] >= threshold]
+    playlist_selected = playlist_sampled["playlist_id"].sample(n=num_playlist_to_test,random_state=0)
     track_ids = {}
-    for list_id in playlist_ids:
+    for list_id in playlist_selected:
         track_ids[list_id] = list(pd_track[pd_track['playlist_id'] == list_id]['track_id'])
     return track_ids
 
-def generate_test_playlist(track_ids, missing_rate = 0.2):
+# TODO: refactor with df.sample
+def generate_test_playlist(track_ids, missing_rate=0.2):
     track_id_for_test = {}
     for key in track_ids:
         all_tracks = track_ids[key]
@@ -26,11 +21,20 @@ def generate_test_playlist(track_ids, missing_rate = 0.2):
         track_id_for_test[key] = all_tracks[:nums_songs_to_test]
     return track_id_for_test
 
+
 def r_precision(prediction, label):
-	prediction = list(set(prediction))
-	label = list(set(label))
-	score = len(list(set(prediction) & set(label))) / len(label)
-	return score
+    """
+    Calculate r-precision: union(p,l)/size
+    :rtype: r-precision score
+    """
+    prediction = list(set(prediction))
+    label = list(set(label))
+    try:
+        score = len(list(set(prediction) & set(label))) / len(label)
+    except Exception:
+        print(f"division by zero prediction: {prediction}, label: {label}, len(label): {len(label)}")
+    return score
+
 
 pd_playlist = pd.read_csv('../data/20210824_212829_playlists.tsv', sep='\t')
 pd_track = pd.read_csv('../data/20210824_212829_tracks.tsv', sep='\t')
