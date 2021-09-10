@@ -3,13 +3,14 @@ import random
 import pandas as pd
 
 
-def generate_playlist(pd_track, pd_playlist, num_playlist_to_test=100,threshold=30):
+def generate_playlist(pd_track, pd_playlist, num_playlist_to_test=100, threshold=30):
     playlist_sampled = pd_playlist[pd_playlist["playlist_num_tracks"] >= threshold]
-    playlist_selected = playlist_sampled["playlist_id"].sample(n=num_playlist_to_test,random_state=0)
+    playlist_selected = playlist_sampled["playlist_id"].sample(n=num_playlist_to_test, random_state=0)
     track_ids = {}
     for list_id in playlist_selected:
         track_ids[list_id] = list(pd_track[pd_track['playlist_id'] == list_id]['track_id'])
     return track_ids
+
 
 # TODO: refactor with df.sample
 def generate_test_playlist(track_ids, missing_rate=0.2):
