@@ -40,4 +40,3 @@ pd_playlist = pd.read_csv('../data/20210824_212829_playlists.tsv', sep='\t')
 pd_track = pd.read_csv('../data/20210824_212829_tracks.tsv', sep='\t')
 
 playlist_test = generate_playlist(pd_track, pd_playlist)
-# test = generate_test_playlist(playlist_test)
