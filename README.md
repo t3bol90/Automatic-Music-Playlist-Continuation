@@ -60,7 +60,7 @@ def check_installed_requirement(reqs):
 - [x] Plan used for teamwork (Grantt file, current: TODO list) 
 - [x] Crawl data from Spotify API (Spotipy lib)
 - [ ] Explore data 
-- [ ] Preprocess data
+- [x] Preprocess data
 - [ ] Reflection
 - [ ] Slides
 - [ ] Team up seminar
