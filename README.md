@@ -17,6 +17,13 @@ Automatic music playlist continuation is a task focused on `ACM Recommender Syst
 ---
 <div style="page-break-after: always"></div>
 
+# Teamwork schedule
+[Notion site](https://t3bol90.notion.site/Teamwork-d58a388013604464ac0a9eedaf81a39d)
+
+# Slide
+
+[Overleaf site](https://www.overleaf.com/read/dqszczyytsrv)
+
 # Problem statement
 How can I get a different recommended song from list tracks of my playlist ? Answer this question will solve the problem of sequential recommendation problem, with a user's playlist Q, we can offer/recommend them a list of suitable tracks which fit with their playlist. In this course, our team will use Machine Learning to solve this problem.
 
@@ -52,6 +59,11 @@ def check_installed_requirement(reqs):
             !conda install {req}
 ```
 
+To run this project, just go to each `notebook`, select `Restart Kernel` and `Run all` to re-run the experiment.
+
+(Note that the `crawling.ipynb` take 30 mins to finish).
+
+
 <!-- (remove in final submission) -->
 # Todo 
 [(Back to top)](#table-of-contents)
@@ -59,10 +71,10 @@ def check_installed_requirement(reqs):
 - [x] Survey of the problem
 - [x] Plan used for teamwork (Grantt file, current: TODO list) 
 - [x] Crawl data from Spotify API (Spotipy lib)
-- [ ] Explore data 
+- [x] Explore data 
 - [x] Preprocess data
 - [ ] Reflection
-- [ ] Slides
+- [x] Slides
 - [ ] Team up seminar
 
 
