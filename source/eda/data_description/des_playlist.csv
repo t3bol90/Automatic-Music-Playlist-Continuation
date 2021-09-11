@@ -1,0 +1,6 @@
+column name, data type, meaning, example
+playlist_id, string, The Spotify ID of the playlist, 37i9dQZF1DXcBWIGoYBM5M
+playlist_name, 'string', The name of playlist, Today's Top Hits
+playlist_description, 'string', The description of playlist, Doja Cat is on top of the Hottest 50!
+playlist_num_tracks, 'int', Number of tracks in that playlist, 50
+playlist_num_followers, 'int', Number of this playlist follower, 29379379

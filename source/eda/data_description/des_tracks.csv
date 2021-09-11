@@ -1,0 +1,12 @@
+column name, data type, meaning, example
+playlist_id, string, The Spotify ID of the playlist, 37i9dQZF1DXcBWIGoYBM5M
+track_id, string, The Spotify ID for the track, 5HCyWlXZPP0y6Gqq8TgA20
+track_name, string, The name of the track, STAY (with Justin Bieber)
+track_duration, int, The duration of the track in milliseconds, 141805
+artist_ids, list, A comma-separated list for the Spotify ID of the artists. (It can be multiple artists in one tracks) ,"[2tIP7SsRs7vjIcLrU85W8J, 1uNFoZAHBGtllmzznpCI3s]"
+artist_names, list, A comma-separated list of artists name,"[The Kid LAROI, Justin Bieber]"
+album_id, string, A comma-separated list of the Spotify IDs for the albums,4QLAtpLNUsHEYrcHXmMIZZ
+album_name, string,Name of the album ,STAY (with Justin Bieber)
+popularity, int, "The popularity of the track. The value will be between 0 and 100, with 100 being the most popular.
+The popularity of a track is a value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.
+Generally speaking, songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past. Duplicate tracks (e.g. the same track from a single and an album) are rated independently. Artist and album popularity is derived mathematically from track popularity. Note that the popularity value may lag actual popularity by a few days: the value is not updated in real time", 100

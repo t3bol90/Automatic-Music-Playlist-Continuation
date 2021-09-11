@@ -1,0 +1,6 @@
+column name, data type, meaning, example
+id,string, The Spotify ID of artist, 1uNFoZAHBGtllmzznpCI3s
+name, string, Name of the artist, Justin Bieber
+followers, int, Number of that artist follower, 48927405
+popularity, int,"The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist’s popularity is calculated from the popularity of all the artist’s tracks",98
+genres, list, A comma seperated list of genres of that artists ,"['canadian pop', 'pop', 'post-teen pop']"
