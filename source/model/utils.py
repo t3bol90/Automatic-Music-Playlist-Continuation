@@ -12,7 +12,6 @@ def generate_playlist(pd_track, pd_playlist, num_playlist_to_test=100, threshold
     return track_ids
 
 
-# TODO: refactor with df.sample
 def generate_test_playlist(track_ids, missing_rate=0.2):
     track_id_for_test = {}
     for key in track_ids:
