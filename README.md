@@ -12,12 +12,12 @@
 
 # Abstract
 
-Automatic music playlist continuation is a task focused on `ACM Recommender Systems Challenge 2018`. It is specific case of sequential recommendation problem in recommendation system. Solving this problem also create a formula of playlist recommendation, given a set of `P` metadata of tracks which have the similarity features, the formula need to recommend `Q` track from the dataset related to `P`. In `Recsys Challenge`, Spotify released a dataset for participants to train their model. In context of this course, we will crawl playlist metadata by using `Sporify Developer API` and crawl external  data by parsing html on Spotify web-app version.
+Automatic music playlist continuation is a task-focused on `ACM Recommender Systems Challenge 2018`. It is the specific case of sequential recommendation problems in the recommendation system. Solving this problem also creates a formula of playlist recommendation. Given a set of `P` metadata of tracks with similarity features, the formula needs to recommend the `Q` track from the dataset related to `P.` In `Recsys Challenge,` Spotify released a dataset for participants to train their model. In the context of this course, we will crawl playlist metadata by using `Spotify Developer API` and crawl external data by parsing HTML on Spotify web-app version.
 
 ---
 <div style="page-break-after: always"></div>
 
-> To teachers of this course, please read the content of this file as a navigator for this project. Because we split the tasks and phrases into different notebook, it's inconvenient when go to each notebook and paste them the same content.
+> To teachers of this course, please read the content of this file as a navigator for this project. Because we split the tasks and phrases into different notebooks, it is inconvenient to go to each notebook and paste them into the same content.
 
 
 This report can be view at better render at [Hackmd site](https://hackmd.io/x1wAsXQeRtuhJIsQXA0r4A).
@@ -31,11 +31,11 @@ This report can be view at better render at [Hackmd site](https://hackmd.io/x1wA
 [Overleaf site](https://www.overleaf.com/read/dqszczyytsrv)
 
 # Problem statement
-How can I get a different recommended song from list tracks of my playlist ? Answer this question will solve the problem of sequential recommendation problem, with a user's playlist Q, we can offer/recommend them a list of suitable tracks which fit with their playlist. In this course, our team will use Machine Learning to solve this problem.
+How can a user get a different recommended song from the list tracks of their playlist? Answer this problem will solve the sequential recommendation problem; with a user's playlist Q, we can offer/recommend them a list of suitable tracks that fit with their playlist. In this course, our team will use Machine Learning to solve this problem.
 
-Our model is an system which tries to calculate the rating or score of how fit is a track to a playlist. For mathematics approach, the problem statement is defined by:
-- Given a list of playlist Q, calculate score of each tracks in $\Omega'$.
-- In recommendation stage, we choose $P$ tracks with highest score for recommendation.
+Our model is a system that tries to calculate the rating or score of how to fit a track is to a playlist. For the mathematics approach, the problem statement is defined by:
+- Given a list of playlist Q, calculate the score of each track in $\Omega'$.
+- In the recommendation stage, we choose $P$ tracks with the highest score for the recommendation.
 
 
 # Table of contents
@@ -64,7 +64,7 @@ Install the customized version of min_ds-env:
 [(Back to top)](#table-of-contents)
 
 First, create a Developer API at https://developer.spotify.com/.
-Put the Client ID and Serect ID to `config.yaml` file:
+Put the Client ID and Secret ID to `config.yaml` file:
 ```yaml 
 SPOTIPY_CLIENT_ID: "xxxxxxxxxxxxxxxxxxxxxxxxxx"
 SPOTIPY_CLIENT_SECRET: "yyyyyyyyyyyyyyyyyyyyyyyyyy"
@@ -72,12 +72,12 @@ SPOTIPY_CLIENT_SECRET: "yyyyyyyyyyyyyyyyyyyyyyyyyy"
 
 Then select `Restart Kernel` and `Run all` to re-run the experiment.
 
-(Note that the `crawling.ipynb` take 30 mins to finish).
+(Note that the `crawling.ipynb` takes 30 mins to finish).
 
 ## Others
 [(Back to top)](#table-of-contents)
 
-To run this project, just go to each `notebook`, select `Restart Kernel` and `Run all` to re-run the experiment.
+Go to each `notebook,` select `Restart Kernel` and `Run all` to re-run the experiment to run this project.
 
 # Collect data:
 [(Back to top)](#table-of-contents)
@@ -104,7 +104,7 @@ See the result in [`explore_data_analysis.ipynb`](source\eda\explore_data_analys
 # Preprocessing Data & Modeling
 [(Back to top)](#table-of-contents)
 
-For each model: KMeans, DBSCAN and KNN, checkout result on:
+For each model: KMeans, DBSCAN, and KNN, checkout result on:
 
 ```
 source\model\
@@ -119,44 +119,44 @@ Our final result on R-precision metrics:
 
 ## Toan Doan
 ### Challenge I have
-- I know WHAT it is? HOW to use it but I don't know WHY we have to use it or not to use it?
+- I know WHAT it is? HOW to use it, but I do not know WHY we have to use it or not to use it?
 ### How I overcome it
 - More research, more reading, more practice
-- Discuss with teammate and friends to get insight of problem
+- Discuss with teammates and friends to get the insight of the problem
 ### What I have learned
 - Data Science Research method, WHAT - HOW - WHY - WHAT IS THE BEST?
 
 ## Minh Duc
 
 ### Challenge I have
-- I had is try to figure out what to do to solve this problem
-- Algorithms take a huge amount of time to apply on the full tracks dataset (Preprocessing steps)
+- I had is trying to figure out what to do to solve this problem
+- Algorithms take a considerable amount of time to apply on the full tracks dataset (Preprocessing steps)
 - How to evaluate the performance of algorithms (Metrics)
-- Understanding my teammate’s works
+- Understanding my teammate's works
 
 ### How I overcome it
 - Referenced to other methods
-- Meet my teammate to report the process more frequently
+- Meet our teammate to report the process more frequently
 
 ### What I have learned
-- Learned how to teamwork, how to overcome when stuck with ideas,and learned how a data science project can be implemented
+- Learned how to teamwork, how to overcome when stuck with ideas, and learned how a data science project could be implemented
 ## Group
-- With traditional Machine Learning approach:
+- With the traditional Machine Learning approach:
     - Run the experiment with full 88819 tracks.
-    - Using recommendation method in ML: Content filtering,Collaborative filtering, ...
+    - Using recommendation methods in ML: Content filtering, Collaborative filtering, ...
 
-- With the view of State-of-the-art method:
-    - Try with some Deep Learning model from the Recsyc 2018 challenge:: Two-stage model architecture [4], hybrid recommender system combining features from text and audio [1],...
+- With the view of the State-of-the-art method:
+    - Try with some Deep Learning models from the Recsyc 2018 challenge:: Two-stage model architecture [4], hybrid recommender system combining features from text and audio [1],...
 
 # References
 
-[1] Andres Ferraro et al. “Automatic playlist continuation using a hybridrecommender system combining features from text and audio”. In:Proceedings of the ACM Recommender Systems Challenge 2018 on -RecSys Challenge ’18(2018).doi:10.1145/3267471.3267473.url:http://dx.doi.org/10.1145/3267471.3267473.
+[1] Andres Ferraro et al. "Automatic playlist continuation using a hybrid recommender system combining features from text and audio." In: Proceedings of the ACM Recommender Systems Challenge 2018 on -RecSys Challenge' 18(2018).doi:10.1145/3267471.3267473.url:http://dx.doi.org/10.1145/3267471.3267473.
 
 [2] Music Recommendation System using Spotify Dataset. Jan. 2021.url:https://www.kaggle.com/vatsalmavani/music-recommendation-system-using-spotify-dataset.prathamsharma123.Spotify
 
 [3] EDA Recommendation System. Aug.2021.url:https://www.kaggle.com/prathamsharma123/spotify-eda-recommendation-system.MaksimsVolkovs et al. 
 
-[4] “Two-stage Model for Automatic PlaylistContinuation at Scale”. In:Proceedings of the ACM RecommenderSystems Challenge 2018 on - RecSys Challenge 18(2018).
+[4] "Two-stage Model for Automatic PlaylistContinuation at Scale." In: Proceedings of the ACM RecommenderSystems Challenge 2018 on - RecSys Challenge 18(2018).
 
 
 # Project structure:
